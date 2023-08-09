@@ -1,1 +1,5 @@
-export type TPictureToFullscreen = { id: number; url: string };
+export type TPictureToFullscreen = {
+  id: number;
+  url: string;
+  title: string;
+};

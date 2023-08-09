@@ -41,7 +41,11 @@ const PageAlbum: React.FC = () => {
       );
       const nextItem = data[currentItem + 1];
       if (nextItem) {
-        setPictureToFullscreen({ id: nextItem.id, url: nextItem.url });
+        setPictureToFullscreen({
+          id: nextItem.id,
+          url: nextItem.url,
+          title: nextItem.title,
+        });
       }
     }
   };
@@ -53,7 +57,11 @@ const PageAlbum: React.FC = () => {
       );
       const previousItem = data[currentItem - 1];
       if (previousItem) {
-        setPictureToFullscreen({ id: previousItem.id, url: previousItem.url });
+        setPictureToFullscreen({
+          id: previousItem.id,
+          url: previousItem.url,
+          title: previousItem.title,
+        });
       }
     }
   };
@@ -83,7 +91,11 @@ const PageAlbum: React.FC = () => {
               alt={picture.title}
               className="rounded-md h-36 w-full object-cover transform transition duration-400 hover:scale-110 cursor-pointer"
               onClick={() =>
-                showFullscreen({ url: picture.url, id: picture.id })
+                showFullscreen({
+                  url: picture.url,
+                  id: picture.id,
+                  title: picture.title,
+                })
               }
             />
           ))}
@@ -95,6 +107,7 @@ const PageAlbum: React.FC = () => {
             pictureToFullscreen ? (
               <PictureFullscreen
                 picture={pictureToFullscreen.url}
+                title={pictureToFullscreen.title}
                 nextPicture={nextPicture}
                 previousPicture={previousPicture}
                 isFirst={
@@ -114,6 +127,7 @@ const PageAlbum: React.FC = () => {
             ) : null
           }
           onClose={closeFullscreenView}
+          size={'md'}
         />
       )}
     </section>

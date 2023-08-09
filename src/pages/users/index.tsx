@@ -47,6 +47,7 @@ const PageUsers: React.FC = () => {
             userToDetail ? <UserDetailInfo user={userToDetail} /> : null
           }
           onClose={closeUserDetailInfo}
+          size={'sm'}
         />
       )}
     </>
