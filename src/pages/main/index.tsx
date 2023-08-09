@@ -1,0 +1,17 @@
+import React from 'react';
+import { PAGE_HOME_TEXT } from 'constants/fixedText/pageHome';
+import { Link } from 'react-router-dom';
+
+const PageHome: React.FC = () => {
+  return (
+    <section className="prose prose-pink mx-auto mt-10 text-end">
+      <h2>{PAGE_HOME_TEXT.title}</h2>
+      <p className="text-justify">{PAGE_HOME_TEXT.desc}</p>
+      <Link to={PAGE_HOME_TEXT.link} target='_blank'>
+        <h3>{PAGE_HOME_TEXT.contactTitle}</h3>
+      </Link>
+    </section>
+  );
+};
+
+export default PageHome;

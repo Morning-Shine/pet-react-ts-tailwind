@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/header';
+import { COLOR_CONTRAST } from 'constants/colors/colors.constants';
+import AppRoutes from 'components/routes';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      // className={`bg-neutral-50 dark:bg-neutral-800 h-screen`}
+      // className={`bg-pink-500 dark:bg-${COLOR_CONTRAST}-800 h-full min-h-screen`}
+      className={`bg-${COLOR_CONTRAST}-50 dark:bg-${COLOR_CONTRAST}-800 h-full min-h-screen
+       flex flex-col`}
+    >
+      <Header />
+      <AppRoutes />
     </div>
   );
-}
+};
 
 export default App;
