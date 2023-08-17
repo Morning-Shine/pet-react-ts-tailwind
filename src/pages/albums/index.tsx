@@ -51,7 +51,7 @@ const PageAlbums: React.FC = () => {
           ))}
         </div>
       )}
-      <div className="flex justify-between">
+      <div className="flex flex-col lg:flex-row justify-between lg:space-x-3">
         <Pagination
           totalPages={totalPages}
           changePage={onPageChange}

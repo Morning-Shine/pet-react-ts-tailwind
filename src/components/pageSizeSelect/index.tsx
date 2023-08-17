@@ -8,7 +8,7 @@ const PageSizeSelect: React.FC<TPageSizeSelectProps> = (props) => {
   const { onChange } = props;
   return (
     <div className="h-20 py-4 flex items-center">
-      <label className="flex justify-between space-x-1">
+      <label className="flex justify-between place-items-center space-x-1">
         <p
           className={`text-lg text-${COLOR_CONTRAST}-900 dark:text-${COLOR_CONTRAST}-300`}
         >
@@ -16,10 +16,10 @@ const PageSizeSelect: React.FC<TPageSizeSelectProps> = (props) => {
         </p>
         <select
           //   defaultValue={['orange', 'banana']}
-          className={`w-10 text-center px-2 focus:outline-none appearance-none
+          className={`max-h-7 w-10 text-center px-2 focus:outline-none appearance-none
           dark:bg-${COLOR_MAIN}-700
           rounded-sm border-2 border-${COLOR_MAIN}-600 dark:border-${COLOR_MAIN}-700
-          text-${COLOR_CONTRAST}-900 dark:text-${COLOR_CONTRAST}-300`}
+          text-${COLOR_CONTRAST}-900 dark:text-${COLOR_CONTRAST}-300 cursor-pointer`}
           onChange={(e) => onChange(e)}
         >
           {PAGE_ALBUMS_SIZES.map((option) => (

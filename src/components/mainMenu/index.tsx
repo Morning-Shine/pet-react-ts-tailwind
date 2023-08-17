@@ -8,13 +8,13 @@ import classNames from 'classnames';
 const MainMenu: React.FC = (props) => {
   const { pathname } = useLocation();
   return (
-    <nav className="flex items-center justify-center">
+    <nav className="grid grid-cols-2 grid-rows-2 md:flex items-center justify-center">
       {STATIC_ROUTES.map((route: IRouteStatic) => (
         <Link
           key={route.path}
           to={route.path}
           className={classNames(
-            'underline px-5',
+            'underline md:px-5',
             route.path === pathname
               // ? `text-teal-300 dark:text-teal-400`
               ? `text-${COLOR_MAIN}-300 dark:text-${COLOR_MAIN}-400`

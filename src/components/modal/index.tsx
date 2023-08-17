@@ -14,6 +14,7 @@ const Modal: React.FC<TModalProps> = (props) => {
       top = '24';
       break;
   }
+// console.log('size', size);
 
   const handleKeypress = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {

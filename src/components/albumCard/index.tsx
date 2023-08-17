@@ -24,7 +24,7 @@ const AlbumCard: React.FC<TAlbumCard> = ({ album }) => {
 
   return (
     <div
-      className={`flex flex-col justify-between border rounded border-${COLOR_CONTRAST}-200 dark:border-${COLOR_CONTRAST}-500 m-2 px-4 py-2`}
+      className={`max-w-md flex flex-col justify-between border rounded border-${COLOR_CONTRAST}-200 dark:border-${COLOR_CONTRAST}-500 m-2 px-4 py-2`}
     >
       <p
         className={`dark:text-${COLOR_CONTRAST}-100 truncate`}
