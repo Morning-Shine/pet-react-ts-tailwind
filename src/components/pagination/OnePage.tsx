@@ -7,7 +7,7 @@ const OnePage: React.FC<TOnePage> = ({ page, isCurrentPage, changePage }) => {
   return (
     <div
       className={classNames(
-        `h-7 w-7 text-center
+        `h-7 w-7 min-w-min text-center
       rounded-sm border-2 border-${COLOR_MAIN}-600 dark:border-${COLOR_MAIN}-700
       text-${COLOR_CONTRAST}-900 dark:text-${COLOR_CONTRAST}-300`,
         isCurrentPage

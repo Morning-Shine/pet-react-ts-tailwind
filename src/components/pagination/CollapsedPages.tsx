@@ -8,14 +8,13 @@ import {
 import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
 import { COLLAPSED_PAGES_STEP } from 'constants/enums/pageSizes';
 
+
 const CollapsedPages: React.FC<TCollapsedPages> = (props) => {
   const { pages, currentPage, changePage } = props;
   const [pagesToDisplay, setPagesToDisplay] = useState(
     pages.slice(0, COLLAPSED_PAGES_STEP)
   );
   const [isShowForwardArrow, setIsShowForwardArrow] = useState(true);
-  console.log('pages', pages);
-  console.log('pagesToDisplay', pagesToDisplay);
 
   const lastPage = pages[pages.length - 1];
 
@@ -37,6 +36,8 @@ const CollapsedPages: React.FC<TCollapsedPages> = (props) => {
       for (let i = startNewStack; i < pages[pages.length - 1]; i++) {
         newPagesStack.push(pages[i]);
       }
+    }
+    if (supposedStackEnd >= lastPage) {
       setIsShowForwardArrow(false);
     }
     setPagesToDisplay(newPagesStack);
