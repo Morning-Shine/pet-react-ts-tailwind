@@ -3,6 +3,7 @@ import AlbumCard from 'components/albumCard';
 import { useGetAlbumsQuery } from 'services/api/albums';
 import PageSizeSelect from 'components/pageSizeSelect';
 import Pagination from 'components/pagination';
+import Loader from 'components/loader';
 import { useAppDispatch, useAppSelector } from 'utils/hooks/useRedux';
 import { changePage, setPagesTotal } from 'store/albumsSlice';
 import { changeAlbumsPageSize } from 'store/pageSizesSlice';
@@ -17,7 +18,7 @@ const PageAlbums: React.FC = () => {
     _page: currentPage.toString(),
   }).toString();
 
-  const { data } = useGetAlbumsQuery(params);
+  const { data, isFetching } = useGetAlbumsQuery(params);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -41,7 +42,12 @@ const PageAlbums: React.FC = () => {
 
   return (
     <section className="w-4/5 mx-auto flex flex-col justify-between grow">
-      {!!data?.data && (
+      {isFetching && (
+        <div className="flex grow align-middle justify-center">
+          <Loader />
+        </div>
+      )}
+      {!isFetching && !!data?.data && (
         <div className="grid grid-cols-grid-cards gap-3 py-6">
           {data.data.map((album) => (
             <AlbumCard

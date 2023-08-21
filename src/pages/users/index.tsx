@@ -3,12 +3,13 @@ import { useGetUsersQuery } from 'services/api/users';
 import UserCard from 'components/userCard';
 import Modal from 'components/modal';
 import UserDetailInfo from 'components/userDetaiInfo';
+import Loader from 'components/loader';
 
 const PageUsers: React.FC = () => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [userIdToDetail, setIdUserToDetail] = useState<number | null>(null);
 
-  const { data } = useGetUsersQuery();
+  const { data, isFetching } = useGetUsersQuery();
 
   const showUserDetail = (id: number) => {
     setIsDetailsOpen(true);
@@ -29,7 +30,13 @@ const PageUsers: React.FC = () => {
   return (
     <>
       <section className="w-4/5 mx-auto grid grid-cols-grid-cards gap-3 py-6">
-        {data &&
+      {isFetching && (
+        <div className="flex grow align-middle justify-center">
+          <Loader />
+        </div>
+      )}
+        {!isFetching &&
+          !!data &&
           data.map((user) => (
             <UserCard
               key={user.id}

@@ -56,7 +56,6 @@ module.exports = {
         teal: colors.teal,
         transparent: colors.transparent,
         white: colors.white,
-        // cyan: colors.cyan,
         pink: colors.pink,
       },
       gridTemplateColumns: {
