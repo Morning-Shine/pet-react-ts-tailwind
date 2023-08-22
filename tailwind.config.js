@@ -3,7 +3,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -60,9 +60,16 @@ module.exports = {
       },
       gridTemplateColumns: {
         'grid-cards': 'repeat( auto-fit, minmax(225px, 1fr))',
-        'footer': '200px minmax(100px, 1fr) 100px',
-      }
+        footer: '200px minmax(100px, 1fr) 100px',
+      },
     },
   },
+  safelist: [
+    {
+      pattern:
+        /(bg|border|text)-(teal|neutral)-(100|200|300|400|500|600|700|800|900)/,
+      variants: ['dark', 'hover'],
+    },
+  ],
   plugins: [require('@tailwindcss/typography')],
 };
