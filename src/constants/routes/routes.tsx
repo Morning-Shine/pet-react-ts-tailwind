@@ -2,6 +2,7 @@ import PageHome from 'pages/main';
 import PageUsers from 'pages/users';
 import PageAlbums from 'pages/albums';
 import PageAlbum from 'pages/album';
+import PagePosts from 'pages/posts';
 import { IRouteStatic, IRouteDymanic } from './type.routes.constants';
 
 export const STATIC_ROUTES: IRouteStatic[] = [
@@ -23,7 +24,7 @@ export const STATIC_ROUTES: IRouteStatic[] = [
   {
     path: '/posts',
     name: 'Публикации',
-    element: null,
+    element: <PagePosts/>,
   },
 ];
 

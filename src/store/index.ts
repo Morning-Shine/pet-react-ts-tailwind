@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import themeSlice from './themeSlice';
 import albumsSlice from './albumsSlice';
+import postsSlice from './postsSlice';
 import pageSizesSlice from './pageSizesSlice';
 import { api } from 'services/api';
 import {
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   [api.reducerPath]: api.reducer,
   theme: themeSlice,
   albums: albumsSlice,
+  posts: postsSlice,
   pageSizes: pageSizesSlice,
 });
 

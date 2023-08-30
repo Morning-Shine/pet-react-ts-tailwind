@@ -6,8 +6,7 @@ import { useAppSelector } from 'utils/hooks/useRedux';
 
 
 const PageSizeSelect: React.FC<TPageSizeSelectProps> = (props) => {
-  const { onChange } = props;
-  const pageSize = useAppSelector((state) => state.pageSizes.albums);
+  const { pageSizes, pageSize, onChange } = props;
 
   return (
     <div className="h-20 py-4 flex items-center">
@@ -25,7 +24,7 @@ const PageSizeSelect: React.FC<TPageSizeSelectProps> = (props) => {
           text-${COLOR_CONTRAST}-900 dark:text-${COLOR_CONTRAST}-300 cursor-pointer`}
           onChange={(e) => onChange(e)}
         >
-          {PAGE_ALBUMS_SIZES.map((option) => (
+          {pageSizes.map((option) => (
             <option
               key={option}
               className={`text-${COLOR_CONTRAST}-900 dark:text-${COLOR_CONTRAST}-300`}
