@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { MODE_LIGHT, MODE_DARK } from 'constants/theme/theme';
-import Switcher from '../switcher';
+import Switcher from 'components/switcher';
 import { BsFillSunFill } from 'react-icons/bs';
 import { RxMoon } from 'react-icons/rx';
 import useChangeMode from 'utils/hooks/useChangeMode';

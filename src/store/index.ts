@@ -2,8 +2,9 @@ import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import themeSlice from './themeSlice';
 import albumsSlice from './albumsSlice';
-import postsSlice from './postsSlice';
+import usersSlice from './usersSlice';
 import pageSizesSlice from './pageSizesSlice';
+import postsSlice from './postsSlice';
 import { api } from 'services/api';
 import {
   persistStore,
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   [api.reducerPath]: api.reducer,
   theme: themeSlice,
   albums: albumsSlice,
+  users: usersSlice,
   posts: postsSlice,
   pageSizes: pageSizesSlice,
 });
@@ -29,7 +31,7 @@ const persistConfig = {
   key: 'pet-react-ts-tailwind',
   version: 1,
   storage,
-  whitelist: ['theme', 'pageSizes'],
+  whitelist: ['theme', 'pageSizes', 'users'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

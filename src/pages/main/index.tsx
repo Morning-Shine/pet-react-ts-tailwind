@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const PageHome: React.FC = () => {
   return (
-    <section className="prose prose-pink mx-auto mt-10 text-end px-5 md:p-0">
+    <section className="prose prose-orange mx-auto mt-10 text-end px-5 md:p-0">
       <h2>{PAGE_HOME_TEXT.title}</h2>
       <p className="text-justify">{PAGE_HOME_TEXT.desc}</p>
       <Link to={PAGE_HOME_TEXT.link} target='_blank'>

@@ -7,16 +7,18 @@ import Loader from 'components/loader';
 import { changePage, setPagesTotal } from 'store/postsSlice';
 import { changePostsPageSize } from 'store/pageSizesSlice';
 import { PAGE_POST_SIZES } from 'constants/enums/pageSizes';
+import Post from 'components/post';
 
 //TODO в роутах добавить lazy?
+//TODO заменить пагинацию на бесконечный скролл?
 const PagePosts: React.FC = () => {
   const pageSize = useAppSelector((state) => state.pageSizes.posts);
   const currentPage = useAppSelector((state) => state.posts.page);
   const totalPages = useAppSelector((state) => state.posts.pagesTotal);
 
   const params = new URLSearchParams({
-      _limit: pageSize.toString(),
-      _page: currentPage.toString(),
+    _limit: pageSize.toString(),
+    _page: currentPage.toString(),
   }).toString();
 
   const { data, isFetching } = useGetPostsQuery(params);
@@ -49,17 +51,27 @@ const PagePosts: React.FC = () => {
           <Loader />
         </div>
       )}
-      POSTS
+      {!isFetching && !!data?.data && (
+        <div className="my-5 flex flex-col space-y-5">
+          {data.data.map((post) => (
+            <Post
+              key={post.id}
+              post={post}
+            />
+          ))}
+        </div>
+      )}
       <div className="flex flex-col lg:flex-row justify-between lg:space-x-3">
         <Pagination
           totalPages={totalPages}
           changePage={onPageChange}
           currentPage={currentPage}
         />
-        <PageSizeSelect 
+        <PageSizeSelect
           pageSizes={PAGE_POST_SIZES}
           pageSize={pageSize}
-          onChange={onPageSizeChange} />
+          onChange={onPageSizeChange}
+        />
       </div>
     </section>
   );

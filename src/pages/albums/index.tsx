@@ -5,9 +5,11 @@ import AlbumCard from 'components/albumCard';
 import PageSizeSelect from 'components/pageSizeSelect';
 import Pagination from 'components/pagination';
 import Loader from 'components/loader';
+import Notification from 'components/notification';
 import { changePage, setPagesTotal } from 'store/albumsSlice';
 import { changeAlbumsPageSize } from 'store/pageSizesSlice';
 import { PAGE_ALBUMS_SIZES } from 'constants/enums/pageSizes';
+import { FILED_TO_LOAD } from 'constants/fixedText/notifications';
 
 const PageAlbums: React.FC = () => {
   const pageSize = useAppSelector((state) => state.pageSizes.albums);
@@ -47,28 +49,38 @@ const PageAlbums: React.FC = () => {
           <Loader />
         </div>
       )}
-      {!isFetching && !!data?.data && (
-        <div className="grid grid-cols-grid-cards gap-3 py-6">
-          {data.data.map((album) => (
-            <AlbumCard
-              key={album.id}
-              album={album}
-            />
-          ))}
-        </div>
-      )}
-      <div className="flex flex-col lg:flex-row justify-between lg:space-x-3">
-        <Pagination
-          totalPages={totalPages}
-          changePage={onPageChange}
-          currentPage={currentPage}
-        />
-        <PageSizeSelect
-          pageSizes={PAGE_ALBUMS_SIZES}
-          pageSize={pageSize}
-          onChange={onPageSizeChange}
-        />
-      </div>
+      {!isFetching &&
+        !!data?.data &&
+        (!!data?.data?.length ? (
+          <>
+            <div className="grid grid-cols-grid-cards gap-3 py-6">
+              {data.data.map((album) => (
+                <AlbumCard
+                  key={album.id}
+                  album={album}
+                />
+              ))}
+            </div>
+            <div className="flex flex-col lg:flex-row justify-between lg:space-x-3">
+              <Pagination
+                totalPages={totalPages}
+                changePage={onPageChange}
+                currentPage={currentPage}
+              />
+              <PageSizeSelect
+                pageSizes={PAGE_ALBUMS_SIZES}
+                pageSize={pageSize}
+                onChange={onPageSizeChange}
+              />
+            </div>
+          </>
+        ) : (
+          <Notification
+            msg={FILED_TO_LOAD}
+            size="xl"
+            type={'error'}
+          />
+        ))}
     </section>
   );
 };
