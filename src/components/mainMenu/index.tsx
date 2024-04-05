@@ -16,9 +16,7 @@ const MainMenu: React.FC = (props) => {
           className={classNames(
             'underline md:px-5',
             route.path === pathname
-              // ? `text-teal-300 dark:text-teal-400`
               ? `text-${COLOR_MAIN}-300 dark:text-${COLOR_MAIN}-400`
-              // : `text-neutral-50 dark:text-neutral-300`
               : `text-${COLOR_CONTRAST}-50 dark:text-${COLOR_CONTRAST}-300`
           )}
         >

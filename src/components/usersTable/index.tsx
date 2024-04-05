@@ -14,7 +14,7 @@ const UsersTable: React.FC<TUserForTable> = ({ data, showDetail }) => {
 
   return (
     <table className={`mt-5 w-full overflow-x-hidden
-                      border border-b-0 dark:border-${COLOR_CONTRAST}-600`}>
+                      border border-b-0 border-${COLOR_CONTRAST}-200 dark:border-${COLOR_CONTRAST}-500`}>
       <thead>
         <tr className="flex justify-around">
           {Object.values(USERS_TABLE_HEADERS).map((header) => (
@@ -33,7 +33,7 @@ const UsersTable: React.FC<TUserForTable> = ({ data, showDetail }) => {
             //TODO проверить отработку шаблона в safelist
             className={`grid grid-cols-${columns.length} gap-x-10
                           pt-3 pb-2 border-b
-                          border-${COLOR_CONTRAST}-200 dark:border-${COLOR_CONTRAST}-600
+                          border-${COLOR_CONTRAST}-200 dark:border-${COLOR_CONTRAST}-500
                           `}
             key={user.id}
           >

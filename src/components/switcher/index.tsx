@@ -6,7 +6,10 @@ import classNames from 'classnames';
 
 const withIcon = (component: React.ReactNode) => {
   return (
-    <div className="text-lg flex place-items-center mx-1 text-teal-600 dark:text-teal-700">
+    <div
+      className={`text-lg flex place-items-center mx-1
+                  text-${COLOR_MAIN}-600 dark:text-${COLOR_MAIN}-700`}
+    >
       {component}
     </div>
   );
@@ -22,7 +25,6 @@ const Switcher: React.FC<TSwitcherProps> = (props) => {
     cont: `px-2 h-8 bg-${COLOR_CONTRAST}-50 dark:bg-${COLOR_CONTRAST}-800 w-min rounded-full flex`,
     switch: classNames(
       checked ? `bg-${COLOR_MAIN}-900` : `bg-${COLOR_MAIN}-600`,
-      // checked ? 'bg-teal-900' : 'bg-teal-600',
       'relative inline-flex h-6 w-11 shrink-0 cursor-pointer',
       'rounded-full border-2 border-transparent transition-colors',
       'duration-200 ease-in-out focus:outline-none focus-visible:ring-2',
@@ -30,7 +32,6 @@ const Switcher: React.FC<TSwitcherProps> = (props) => {
     ),
     toggle: classNames(
       checked ? 'translate-x-5' : 'translate-x-0',
-      // `bg-neutral-50 dark:bg-neutral-600`,
       `bg-${COLOR_CONTRAST}-50 dark:bg-${COLOR_CONTRAST}-600`,
       'pointer-events-none inline-block h-5 w-5 transform rounded-full',
       'shadow-lg ring-0 transition duration-200 ease-in-out'

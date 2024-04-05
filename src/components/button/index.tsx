@@ -4,7 +4,7 @@ import React from 'react';
 const Button: React.FC = (props) => {
     // const {size} = props
   return (
-    <div className='border rounded'>
+    <div className='border rounded'>Button
     </div>
   );
 };
