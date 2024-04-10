@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from '@headlessui/react';
 import { TSwitcherProps } from './type';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import classNames from 'classnames';
 
 const withIcon = (component: React.ReactNode) => {

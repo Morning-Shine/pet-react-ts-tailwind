@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { TNotification } from './type';
 import { IoWarning } from 'react-icons/io5';
 import { MdError } from 'react-icons/md';

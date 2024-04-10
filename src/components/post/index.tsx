@@ -1,6 +1,6 @@
 import React from 'react';
 import { TPostCard } from './type';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import Button from 'components/button';
 
 

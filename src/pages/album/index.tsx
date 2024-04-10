@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { SlArrowRight } from 'react-icons/sl';
 import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
-import { COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_MAIN } from 'constants/styles/colors.constants';
 import { useGetAlbumPhotoQuery } from 'services/api/albums';
 import { skipToken } from '@reduxjs/toolkit/query/react';
 import Modal from 'components/modal';
 import PictureFullscreen from 'components/pictureFullscreen';
 import { TPictureToFullscreen } from './type';
+import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageAlbum: React.FC = () => {
   const [isFullscreenView, setFullscreenView] = useState(false);
@@ -67,7 +68,7 @@ const PageAlbum: React.FC = () => {
   };
 
   return linkProps?.albumName ? (
-    <section className="w-4/5 mx-auto">
+    <section className={`w-4/5 mx-auto mt-${HEADER_HEIGTH}`}>
       <div
         className={`flex items-center
           mt-5 space-x-2

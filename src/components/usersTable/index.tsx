@@ -1,6 +1,6 @@
 import React from 'react';
 import { USERS_TABLE_HEADERS } from 'constants/enums/usersTableHeaders';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { TUserForTable } from './type';
 import { Tooltip } from 'react-tooltip';
 import { LiaEye } from 'react-icons/lia';

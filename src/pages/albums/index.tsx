@@ -12,6 +12,7 @@ import { PAGE_ALBUMS_SIZES } from 'constants/enums/pageSizes';
 import { FILED_TO_LOAD } from 'constants/fixedText/notifications';
 import FilterByUser from 'pages/albums/components/filterByUser';
 import { TUrlParams } from './type';
+import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageAlbums: React.FC = () => {
   const pageSize = useAppSelector((state) => state.pageSizes.albums);
@@ -57,7 +58,7 @@ const PageAlbums: React.FC = () => {
   const onPageChange = (page: number) => dispatch(changePage(page));
 
   return (
-    <section className="w-4/5 mx-auto flex flex-col grow">
+    <section className={`w-4/5 mx-auto mt-${HEADER_HEIGTH} flex flex-col grow`}>
       <div className="my-6">
         <FilterByUser
           filteredUserId={filteredUser}

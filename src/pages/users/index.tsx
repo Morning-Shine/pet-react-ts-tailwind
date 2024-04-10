@@ -9,6 +9,7 @@ import { FILED_TO_LOAD } from 'constants/fixedText/notifications';
 import ChangeUsersView from './components/ChangeUsersView';
 import { useAppSelector } from 'utils/hooks/useRedux';
 import UsersTable from 'components/usersTable';
+import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageUsers: React.FC = () => {
   const view = useAppSelector((state) => state.users.view);
@@ -36,7 +37,7 @@ const PageUsers: React.FC = () => {
 
   return (
     <>
-      <section className="w-4/5 mx-auto flex flex-col grow">
+      <section className={`w-4/5 mt-${HEADER_HEIGTH} mx-auto flex flex-col grow`}>
         {isFetching && (
           <div className="flex grow align-middle justify-center">
             <Loader />

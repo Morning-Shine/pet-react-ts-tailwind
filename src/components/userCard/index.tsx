@@ -1,6 +1,6 @@
 import React from 'react';
 import { TUserForCard } from './type';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { LiaEye } from 'react-icons/lia';
 
 

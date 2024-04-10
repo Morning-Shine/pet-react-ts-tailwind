@@ -1,4 +1,4 @@
-import { COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_MAIN } from 'constants/styles/colors.constants';
 import React from 'react';
 import { TPicturePreview } from './type';
 

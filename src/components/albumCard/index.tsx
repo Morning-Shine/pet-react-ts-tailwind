@@ -1,6 +1,6 @@
 import React from 'react';
 import { TAlbumCard } from './type';
-import { COLOR_CONTRAST } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST } from 'constants/styles/colors.constants';
 import { Tooltip } from 'react-tooltip';
 import { useGetAlbumPhotoQuery } from 'services/api/albums';
 import PicturePreview from 'components/picturePreview';

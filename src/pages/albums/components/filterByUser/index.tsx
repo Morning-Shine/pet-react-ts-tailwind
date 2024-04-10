@@ -2,7 +2,7 @@ import React from 'react';
 import DropDownList from './dropDownList';
 import { TFilterByUser } from './type';
 import { LuFilterX } from 'react-icons/lu';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 
 const FilterByUser: React.FC<TFilterByUser> = ({
   filteredUserId,

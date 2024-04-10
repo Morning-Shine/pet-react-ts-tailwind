@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import Switcher from 'components/switcher';
 import { FaAddressCard, FaTableList } from 'react-icons/fa6';
 import { Tooltip } from 'react-tooltip';
-import { COLOR_CONTRAST } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST } from 'constants/styles/colors.constants';
 import { TOOLTIPS } from 'constants/enums/tooltips';
 import { useAppDispatch, useAppSelector } from 'utils/hooks/useRedux';
 import { changeView } from 'store/usersSlice';

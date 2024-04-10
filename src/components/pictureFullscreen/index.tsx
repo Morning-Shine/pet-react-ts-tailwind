@@ -1,7 +1,7 @@
 import React from 'react';
 import { TPictureFullscreen } from './type';
 import { HiArrowCircleLeft, HiArrowCircleRight } from 'react-icons/hi';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 
 const PictureFullscreen: React.FC<TPictureFullscreen> = ({
   picture,

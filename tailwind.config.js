@@ -64,11 +64,15 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|border|text)-(teal|neutral)-(100|200|300|400|500|600|700|800|900)/,
+        /(bg|border|text)-(teal|neutral)-(50|100|200|300|400|500|600|700|800|900)/,
       variants: ['dark', 'hover'],
     },
     {
       pattern: /(grid-cols|grid-rows)-(\d)/,
+      variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+    },
+    {
+      pattern: /(m|mx|my|mt|mr|mb|ml)-(\d)/,
       variants: ['sm', 'md', 'lg', 'xl', '2xl'],
     },
   ],

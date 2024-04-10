@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { STATIC_ROUTES } from 'constants/routes/routes';
 import { IRouteStatic } from 'constants/routes/type.routes.constants';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import classNames from 'classnames';
 
 const MainMenu: React.FC = (props) => {

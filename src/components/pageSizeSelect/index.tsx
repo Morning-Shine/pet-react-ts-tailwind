@@ -1,7 +1,7 @@
 import React from 'react';
 import { PAGE_ALBUMS_SIZES } from 'constants/enums/pageSizes';
 import { TPageSizeSelectProps } from './type';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { useAppSelector } from 'utils/hooks/useRedux';
 
 

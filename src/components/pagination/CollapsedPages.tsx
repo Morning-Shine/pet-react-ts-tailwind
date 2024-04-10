@@ -5,7 +5,7 @@ import {
   MdOutlineKeyboardDoubleArrowRight,
   MdOutlineKeyboardDoubleArrowLeft,
 } from 'react-icons/md';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { COLLAPSED_PAGES_STEP } from 'constants/enums/pageSizes';
 
 

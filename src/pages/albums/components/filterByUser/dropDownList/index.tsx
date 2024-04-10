@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { useGetUsersQuery } from 'services/api/users';
 import {
   USERS_SELECT_DISABLED_OPTION,

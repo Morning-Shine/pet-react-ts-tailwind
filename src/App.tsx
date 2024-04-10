@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/header';
-import { COLOR_CONTRAST } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST } from 'constants/styles/colors.constants';
 import AppRoutes from 'components/routes';
 import './App.css';
 

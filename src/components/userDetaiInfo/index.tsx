@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/colors/colors.constants';
+import { COLOR_CONTRAST, COLOR_MAIN } from 'constants/styles/colors.constants';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { TbWorldWww } from 'react-icons/tb';
 import { TUserDetail } from './type';
