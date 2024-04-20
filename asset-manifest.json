@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/marycona-pet-react-ts-tailwind/static/css/main.c915ac82.css",
+    "main.js": "/marycona-pet-react-ts-tailwind/static/js/main.0e4c71a5.js",
+    "static/js/215.2150706d.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/215.2150706d.chunk.js",
+    "static/js/236.db67d3f5.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/236.db67d3f5.chunk.js",
+    "static/js/952.e8ac2728.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/952.e8ac2728.chunk.js",
+    "static/js/763.1b87b9c0.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/763.1b87b9c0.chunk.js",
+    "static/js/856.c81a6133.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/856.c81a6133.chunk.js",
+    "static/js/834.29558359.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/834.29558359.chunk.js",
+    "static/js/373.d04abb8e.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/373.d04abb8e.chunk.js",
+    "static/js/338.f005eda2.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/338.f005eda2.chunk.js",
+    "static/js/632.a3fa7d54.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/632.a3fa7d54.chunk.js",
+    "static/js/129.5e309f3e.chunk.js": "/marycona-pet-react-ts-tailwind/static/js/129.5e309f3e.chunk.js",
+    "static/media/loader.svg": "/marycona-pet-react-ts-tailwind/static/media/loader.fa0694846444790b66c7d8adb9b4f077.svg",
+    "index.html": "/marycona-pet-react-ts-tailwind/index.html",
+    "main.c915ac82.css.map": "/marycona-pet-react-ts-tailwind/static/css/main.c915ac82.css.map",
+    "main.0e4c71a5.js.map": "/marycona-pet-react-ts-tailwind/static/js/main.0e4c71a5.js.map",
+    "215.2150706d.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/215.2150706d.chunk.js.map",
+    "236.db67d3f5.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/236.db67d3f5.chunk.js.map",
+    "952.e8ac2728.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/952.e8ac2728.chunk.js.map",
+    "763.1b87b9c0.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/763.1b87b9c0.chunk.js.map",
+    "856.c81a6133.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/856.c81a6133.chunk.js.map",
+    "834.29558359.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/834.29558359.chunk.js.map",
+    "373.d04abb8e.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/373.d04abb8e.chunk.js.map",
+    "338.f005eda2.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/338.f005eda2.chunk.js.map",
+    "632.a3fa7d54.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/632.a3fa7d54.chunk.js.map",
+    "129.5e309f3e.chunk.js.map": "/marycona-pet-react-ts-tailwind/static/js/129.5e309f3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c915ac82.css",
+    "static/js/main.0e4c71a5.js"
+  ]
+}
