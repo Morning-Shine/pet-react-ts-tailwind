@@ -3,14 +3,13 @@ import { useGetPostsQuery } from 'services/api/posts';
 import { useAppDispatch, useAppSelector } from 'utils/hooks/useRedux';
 import PageSizeSelect from 'components/pageSizeSelect';
 import Pagination from 'components/pagination';
-import Loader from 'components/loader';
+import LoadingPage from 'components/loadingPage';
 import { changePage, setPagesTotal } from 'store/postsSlice';
 import { changePostsPageSize } from 'store/pageSizesSlice';
 import { PAGE_POST_SIZES } from 'constants/enums/pageSizes';
 import Post from 'components/post';
-import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
-//TODO в роутах добавить lazy?
+
 //TODO заменить пагинацию на бесконечный скролл?
 const PagePosts: React.FC = () => {
   const pageSize = useAppSelector((state) => state.pageSizes.posts);
@@ -46,15 +45,11 @@ const PagePosts: React.FC = () => {
   console.log('data', data);
 
   return (
-    <section className={`w-4/5 mx-auto mt-${HEADER_HEIGTH} flex flex-col justify-between grow`}>
-      {isFetching && (
-        <div className="flex grow align-middle justify-center">
-          <Loader />
-        </div>
-      )}
+    <section className="w-4/5 mx-auto flex flex-col justify-between grow">
+      {isFetching && <LoadingPage />}
       {!isFetching && !!data?.data && (
         <div className="my-5 flex flex-col space-y-5">
-          <div className='text-xl font-bold text-red-800'>
+          <div className="text-xl font-bold text-red-800">
             РАЗДЕЛ НАХОДИТСЯ В РАЗРАБОТКЕ
           </div>
           {data.data.map((post) => (

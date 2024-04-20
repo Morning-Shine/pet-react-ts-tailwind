@@ -72,7 +72,7 @@ module.exports = {
       variants: ['sm', 'md', 'lg', 'xl', '2xl'],
     },
     {
-      pattern: /(m|mx|my|mt|mr|mb|ml)-(\d)/,
+      pattern: /(h|m|mx|my|mt|mr|mb|ml)-(\d)/,
       variants: ['sm', 'md', 'lg', 'xl', '2xl'],
     },
   ],

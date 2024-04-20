@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { SlArrowRight } from 'react-icons/sl';
 import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
 import { COLOR_MAIN } from 'constants/styles/colors.constants';
@@ -7,12 +7,12 @@ import { skipToken } from '@reduxjs/toolkit/query/react';
 import Modal from 'components/modal';
 import PictureFullscreen from 'components/pictureFullscreen';
 import { TPictureToFullscreen } from './type';
-import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageAlbum: React.FC = () => {
   const [isFullscreenView, setFullscreenView] = useState(false);
   const [pictureToFullscreen, setPictureToFullscreen] =
     useState<TPictureToFullscreen | null>(null);
+
 
   const { id } = useParams();
   const { state: linkProps } = useLocation();
@@ -23,6 +23,7 @@ const PageAlbum: React.FC = () => {
     },
     { skip: !id }
   );
+
 
   const showFullscreen = (picture: TPictureToFullscreen) => {
     setFullscreenView(true);
@@ -68,7 +69,7 @@ const PageAlbum: React.FC = () => {
   };
 
   return linkProps?.albumName ? (
-    <section className={`w-4/5 mx-auto mt-${HEADER_HEIGTH}`}>
+    <section className='w-4/5 mx-auto'>
       <div
         className={`flex items-center
           mt-5 space-x-2
@@ -90,7 +91,8 @@ const PageAlbum: React.FC = () => {
               key={picture.id}
               src={picture.thumbnailUrl}
               alt={picture.title}
-              className="rounded-md h-36 w-full object-cover transform transition duration-400 hover:scale-110 cursor-pointer"
+              className="rounded-md h-36 w-full object-cover
+                         transform transition duration-400 hover:scale-110 cursor-pointer"
               onClick={() =>
                 showFullscreen({
                   url: picture.url,

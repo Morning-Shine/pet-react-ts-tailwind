@@ -30,7 +30,6 @@ const UsersTable: React.FC<TUserForTable> = ({ data, showDetail }) => {
       <tbody className="flex flex-col">
         {data.map((user) => (
           <tr
-            //TODO проверить отработку шаблона в safelist
             className={`grid grid-cols-${columns.length} gap-x-10
                           pt-3 pb-2 border-b
                           border-${COLOR_CONTRAST}-200 dark:border-${COLOR_CONTRAST}-500

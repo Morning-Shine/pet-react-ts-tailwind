@@ -3,13 +3,12 @@ import { useGetUsersQuery } from 'services/api/users';
 import UserCard from 'components/userCard';
 import Modal from 'components/modal';
 import UserDetailInfo from 'components/userDetaiInfo';
-import Loader from 'components/loader';
+import LoadingPage from 'components/loadingPage';
 import Notification from 'components/notification';
 import { FILED_TO_LOAD } from 'constants/fixedText/notifications';
 import ChangeUsersView from './components/ChangeUsersView';
 import { useAppSelector } from 'utils/hooks/useRedux';
 import UsersTable from 'components/usersTable';
-import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageUsers: React.FC = () => {
   const view = useAppSelector((state) => state.users.view);
@@ -37,12 +36,8 @@ const PageUsers: React.FC = () => {
 
   return (
     <>
-      <section className={`w-4/5 mt-${HEADER_HEIGTH} mx-auto flex flex-col grow`}>
-        {isFetching && (
-          <div className="flex grow align-middle justify-center">
-            <Loader />
-          </div>
-        )}
+      <section className="w-4/5 mx-auto flex flex-col grow">
+        {isFetching && <LoadingPage />}
         {!isFetching &&
           !!data &&
           (!!data.length ? (
@@ -62,7 +57,10 @@ const PageUsers: React.FC = () => {
                   ))}
                 </div>
               ) : (
-                <UsersTable data={data} showDetail={showUserDetail} />
+                <UsersTable
+                  data={data}
+                  showDetail={showUserDetail}
+                />
               )}
             </>
           ) : (

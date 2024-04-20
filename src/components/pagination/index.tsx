@@ -13,7 +13,6 @@ const Pagination: React.FC<TPagination> = (props) => {
   return totalPages !== 0 ? (
     <div className="flex space-x-1 items-center">
       {
-        // TODO сколько страниц оставляем для отображения?
         pages.length <= 7 ? (
           pages.map((page) => (
             <OnePage

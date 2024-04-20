@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from 'utils/hooks/useRedux';
 import AlbumCard from 'components/albumCard';
 import PageSizeSelect from 'components/pageSizeSelect';
 import Pagination from 'components/pagination';
-import Loader from 'components/loader';
+import LoadingPage from 'components/loadingPage';
 import Notification from 'components/notification';
 import { changePage, setPagesTotal } from 'store/albumsSlice';
 import { changeAlbumsPageSize } from 'store/pageSizesSlice';
@@ -12,7 +12,6 @@ import { PAGE_ALBUMS_SIZES } from 'constants/enums/pageSizes';
 import { FILED_TO_LOAD } from 'constants/fixedText/notifications';
 import FilterByUser from 'pages/albums/components/filterByUser';
 import { TUrlParams } from './type';
-import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageAlbums: React.FC = () => {
   const pageSize = useAppSelector((state) => state.pageSizes.albums);
@@ -25,14 +24,13 @@ const PageAlbums: React.FC = () => {
     _page: currentPage.toString(),
   };
 
-
-  if (filteredUser!== '') {
+  if (filteredUser !== '') {
     params.userId = filteredUser.toString();
   }
 
   const urlParams = new URLSearchParams(params).toString();
 
-    const { data, isFetching } = useGetAlbumsQuery(urlParams, {
+  const { data, isFetching } = useGetAlbumsQuery(urlParams, {
     refetchOnMountOrArgChange: true,
   });
 
@@ -48,7 +46,7 @@ const PageAlbums: React.FC = () => {
     };
   }, [data, dispatch, pageSize]);
 
-  //TODO геометку на картах?
+  
   const onPageSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = +e.target.value as (typeof PAGE_ALBUMS_SIZES)[number];
     dispatch(changeAlbumsPageSize(value));
@@ -58,7 +56,7 @@ const PageAlbums: React.FC = () => {
   const onPageChange = (page: number) => dispatch(changePage(page));
 
   return (
-    <section className={`w-4/5 mx-auto mt-${HEADER_HEIGTH} flex flex-col grow`}>
+    <section className="w-4/5 mx-auto flex flex-col grow">
       <div className="my-6">
         <FilterByUser
           filteredUserId={filteredUser}
@@ -66,11 +64,7 @@ const PageAlbums: React.FC = () => {
         />
       </div>
       <div className="flex flex-col justify-between grow">
-        {isFetching && (
-          <div className="flex grow align-middle justify-center">
-            <Loader />
-          </div>
-        )}
+        {isFetching && <LoadingPage />}
         {!isFetching &&
           !!data?.data &&
           (!!data?.data?.length ? (

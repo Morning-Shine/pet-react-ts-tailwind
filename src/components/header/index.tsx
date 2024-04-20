@@ -6,7 +6,12 @@ import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const Header: React.FC = () => {
   return (
-    <header className={`bg-${COLOR_MAIN}-700 h-${HEADER_HEIGTH} w-full fixed flex md:flex-row`}>
+    // <header className={`bg-${COLOR_MAIN}-700 h-${HEADER_HEIGTH} w-full fixed flex md:flex-row`}>
+    <header
+      className={`bg-${COLOR_MAIN}-700 h-${HEADER_HEIGTH}
+                  w-full sticky top-0 z-50
+                  flex md:flex-row`}
+    >
       <div className="w-full flex justify-center">
         <MainMenu />
       </div>

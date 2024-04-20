@@ -1,11 +1,10 @@
 import React from 'react';
 import { PAGE_HOME_TEXT } from 'constants/fixedText/pageHome';
 import { Link } from 'react-router-dom';
-import { HEADER_HEIGTH } from 'constants/styles/sizes.constants';
 
 const PageHome: React.FC = () => {
   return (
-    <section className={`prose prose-orange mx-auto mt-${HEADER_HEIGTH} text-end px-5 md:p-0`}>
+    <section className='prose prose-orange mx-auto text-end px-5 md:p-0'>
       <h2 className='mt-10'>{PAGE_HOME_TEXT.title}</h2>
       <p className="text-justify">{PAGE_HOME_TEXT.desc}</p>
       <Link to={PAGE_HOME_TEXT.link} target='_blank'>
